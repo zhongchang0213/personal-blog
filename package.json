@@ -1,0 +1,22 @@
+{
+  "name": "personal-blog",
+  "version": "1.0.0",
+  "description": "node-express个人博客",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhongchang0213/personal-blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhongchang0213/personal-blog/issues"
+  },
+  "homepage": "https://github.com/zhongchang0213/personal-blog#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
