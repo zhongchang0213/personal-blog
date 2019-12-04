@@ -14,7 +14,7 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: true,
-        password: /^[\w]{6-18}$/
+        match: /^[\w]{6-18}$/
     },
     isSuper: {
         type: Number,
