@@ -6,6 +6,7 @@ const login = require('../controller/user/login');
 const loginOut = require('../controller/user/loginOut');
 const changePwd = require('../controller/user/changePwd');
 const uploadAvatar = require('../controller/user/uploadAvatar');
+const userInfo = require('../controller/user/userInfo');
 
 const router = express.Router();
 
@@ -14,5 +15,6 @@ router.post('/login', login);
 router.post('/loginOut', loginOut);
 router.post('/changePwd', checkUser, changePwd);
 router.post('/uploadAvatar', checkUser, uploadAvatar);
+router.get('/userInfo', checkUser, userInfo);
 
 module.exports = router;

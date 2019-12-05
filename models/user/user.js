@@ -13,8 +13,7 @@ const userSchema = new Schema({
     },
     password: {
         type: String,
-        required: true,
-        match: /^[\w]{6-18}$/
+        required: true
     },
     isSuper: {
         type: Number,
@@ -26,7 +25,7 @@ const userSchema = new Schema({
     },
     avatar: {
         type: String,
-        default: ''
+        default: '/avatar/default.jpg'
     },
     status: {
         type: String,

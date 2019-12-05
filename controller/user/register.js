@@ -2,7 +2,7 @@ const user = require('../../models/user/user')
 
 const register = async (req, res) => {
 
-    let { userName, password, tel } = req.body;
+    let { userName, password } = req.body;
 
     if ( userName && password ) {
         let resUser = await user.findOne({ userName });
@@ -14,8 +14,7 @@ const register = async (req, res) => {
         } else {
             let newUser = await user.create({
                 userName,
-                password,
-                tel
+                password
             }).catch(err => {
                 res.send({
                     status: '2',
