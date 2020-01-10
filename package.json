@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/zhongchang0213/personal-blog#readme",
   "dependencies": {
+    "ali-oss": "^6.4.0",
     "connect-mongo": "^3.1.2",
     "express": "^4.17.1",
     "express-session": "^1.17.0",

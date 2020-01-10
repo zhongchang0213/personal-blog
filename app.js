@@ -4,6 +4,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const connectMongo = require('connect-mongo');
+const client = require('./utils/oss');
 
 const router = require('./routes');
 
@@ -44,3 +45,40 @@ mongoose.connect('mongodb://localhost:27017/blog',  {
         console.log('数据库连接失败');
         console.log(err);
     });
+
+// async function put () {
+//     try {
+//     // object表示上传到OSS的Object名称，localfile表示本地文件或者文件路径
+//     let r1 = await client.put('zchang','article'); 
+//     console.log('put success: %j', r1);
+//     let r2 = await client.get('zchang');
+//     console.log('get success: %j', r2);
+//     } catch(e) {
+//     console.error('error: %j', err);
+//     }
+// }
+// put();
+
+async function put () {
+  try {
+    let result = await client.put('file.png', './audited.png');
+    console.log(result);
+   } catch (err) {
+     console.log (err);
+   }
+}
+
+async function get () {
+    try {
+      let result = await client.get('zchang');
+      console.log(result);
+    } catch (err) {
+      console.log (err);
+    }
+  }
+
+          
+  
+// get();
+
+put();
